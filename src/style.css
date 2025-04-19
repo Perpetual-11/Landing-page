@@ -1,0 +1,362 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+    background-color: #000;
+  }
+  
+  /* Header Styling */
+  .main-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1000;
+    background-color: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-menu a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: #ff5e3a;
+  }
+  
+  .header-btn {
+    background-color: #ff5e3a;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header-btn:hover {
+    background-color: #e74c1f;
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    color: #000;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: #000;
+      padding: 20px 0;
+      text-align: center;
+    }
+  
+    .nav-menu.open {
+      display: block;
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .header-btn {
+      display: none; /* Hide Shop Now button on small screens if needed */
+    }
+
+    .hero-img {
+        display: none;
+    }
+  }
+  
+
+  .hero {
+    height: 100vh;
+    background: url('watch-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    color: white;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .hero-btn {
+    background-color: #ff5e3a;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hero-btn:hover {
+    background-color: #e74c1f;
+  }
+
+
+  .features {
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .features-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+  
+  .feature {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    width: 300px;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature img {
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .feature h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #111;
+  }
+  
+  .feature p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px);
+  }
+
+  
+  .testimonials {
+    background-color: #111;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .testimonials h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  
+  .testimonial-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .testimonial {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 300px;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    font-style: italic;
+    transition: transform 0.3s ease;
+  }
+  
+  .testimonial:hover {
+    transform: scale(1.05);
+  }
+  
+  .testimonial h4 {
+    margin-top: 20px;
+    font-style: normal;
+    color: #ff5e3a;
+  }
+
+  .signup {
+    background-color: #ff5e3a;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .signup-container {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .signup h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .signup p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  .signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .signup-form input[type="email"] {
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .signup-form button {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-form button:hover {
+    background-color: #222;
+  }
+  
+  @media (min-width: 600px) {
+    .signup-form {
+      flex-direction: row;
+    }
+  
+    .signup-form input {
+      flex: 1;
+    }
+  }
+
+  
+  /* optional */
+
+  /* ========== MEDIA QUERIES ========== */
+
+/* Tablets and up */
+@media (min-width: 768px) {
+    .hero h1 {
+      font-size: 4rem;
+    }
+  
+    .hero p {
+      font-size: 1.3rem;
+    }
+  
+    .feature {
+      width: 30%;
+    }
+  
+    .testimonial {
+      max-width: 28%;
+    }
+  
+    .signup-form {
+      flex-direction: row;
+    }
+  
+    .signup-form input {
+      flex: 1;
+    }
+  }
+  
+  /* Desktop and up */
+  @media (min-width: 1024px) {
+    header {
+      padding: 30px 0;
+    }
+  
+    .container {
+      padding: 0 40px;
+    }
+  
+    .hero-content {
+      padding: 40px;
+    }
+  }
+  
+  
+  
